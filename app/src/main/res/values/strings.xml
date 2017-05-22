@@ -7,5 +7,6 @@
         <item>преподаватель</item>
     </string-array>
     <string name="next">Далее</string>
+    <string name="title_activity_students_data">StudentsDataActivity</string>
 </resources>
 
