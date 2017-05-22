@@ -26,6 +26,7 @@
         android:text="@string/greeting"
         android:id="@+id/textView"
         android:layout_marginTop="58dp"
+        android:gravity="center_horizontal"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
