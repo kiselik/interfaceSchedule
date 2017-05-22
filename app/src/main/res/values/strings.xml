@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Schedule</string>
+    <string name="greeting">Привет, для начала, скажи кто ты: </string>
+</resources>
