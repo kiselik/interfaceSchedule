@@ -6,5 +6,6 @@
         <item>студент</item>
         <item>преподаватель</item>
     </string-array>
+    <string name="next">Далее</string>
 </resources>
 
