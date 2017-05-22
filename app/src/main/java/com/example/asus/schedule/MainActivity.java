@@ -45,10 +45,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //next.setText("эта кнопка была нажата и обработана");
         switch (position){
             case 0:
-                Intent intent= new Intent(this, StudentsDataActivity.class);
-                startActivity(intent);
+                Intent intentForStudents= new Intent(this, StudentsDataActivity.class);
+                startActivity(intentForStudents);
                 break;
             case 1:
+                Intent intentForTeachers= new Intent(this, LoginTeachersActivity.class);
+                startActivity(intentForTeachers);
                 break;
         }
     }
