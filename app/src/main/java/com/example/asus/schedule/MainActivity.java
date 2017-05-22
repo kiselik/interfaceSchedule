@@ -18,23 +18,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main);
 
         //String[] type_of_people = {"студент","преподаватель"};
-        // адаптер
+        // настройка адаптера
         ArrayAdapter<?> adapter = ArrayAdapter.createFromResource(this, R.array.type_of_people,android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        final Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        //его подгрузка
         spinner.setAdapter(adapter);
         // заголовок
         spinner.setPrompt("Кто же ты?)");
-        // по умолчанию в этом элементе показывается 1 элемент (в нашем случае это студент)
-       // spinner.setSelection(1);
-        // устанавливаем обработчик нажатия*/
+        // устанавливаем обработчик нажатия
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view,
                                        int position, long id) {
                 // показываем позиция нажатого элемента
-                Toast.makeText(getBaseContext(), "Твой выбор: = " + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Твой выбор: " + spinner.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
             }
             @Override
             public void onNothingSelected(AdapterView<?> arg0) {

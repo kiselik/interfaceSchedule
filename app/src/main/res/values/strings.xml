@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Schedule</string>
-    <string name="greeting">Привет! Ты здесь первый раз?
-        <br>Ответь на пару вопросов</br> </string>
+    <string name="greeting">Привет! Ты здесь первый раз?\n
+        Ответь на пару вопросов </string>
     <string-array name="type_of_people">
         <item>студент</item>
         <item>преподаватель</item>
