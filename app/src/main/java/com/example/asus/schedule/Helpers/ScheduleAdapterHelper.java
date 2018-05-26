@@ -1,13 +1,24 @@
 package com.example.asus.schedule.Helpers;
 
 import android.content.Context;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseExpandableListAdapter;
+import android.widget.Button;
 import android.widget.SimpleExpandableListAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.asus.schedule.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class ScheduleAdapterHelper {
+    private final String LOG_TAG="myLogs";
     private final String ATTR_GROUP_NAME = "dayName";
     private final String ATTR_SUBJ_NAME = "subjectName";
     
@@ -35,7 +46,7 @@ public class ScheduleAdapterHelper {
         ctx = _ctx;
     }
 
-    public SimpleExpandableListAdapter getAdapter() {
+    SimpleExpandableListAdapter getAdapter() {
 
         // заполняем коллекцию групп из массива с названиями групп
         groupData = new ArrayList<Map<String, String>>();
@@ -95,6 +106,7 @@ public class ScheduleAdapterHelper {
             m.put(ATTR_SUBJ_NAME, subj);
             childDataItem.add(m);
         }
+        childData.add(childDataItem);
 
         childDataItem = new ArrayList<Map<String, String>>();
         childData.add(childDataItem);
@@ -122,6 +134,14 @@ public class ScheduleAdapterHelper {
                 childTo);
 
         return adapter;
+    }
+
+    public ArrayList<Map<String, String>> getGroupData(){
+        return groupData;
+    }
+
+    public ArrayList<ArrayList<Map<String, String>>> getChildData(){
+        return childData;
     }
 
     public String getGroupText(int groupPos) {

@@ -1,12 +1,17 @@
 <resources>
     <string name="app_name">Schedule</string>
-    <string name="greeting">Привет! Ты здесь первый раз?\n
-        Ответь на пару вопросов: </string>
+    <string name="greeting">Привет!\n Ты здесь первый раз?\n
+        Определись, на чьей ты стороне: </string>
     <string-array name="type_of_people">
         <item>студент</item>
         <item>преподаватель</item>
     </string-array>
     <string name="next">Далее</string>
+    <string name="previous">Назад</string>
+    <string name="choose_year_text">Выбери номер учебного курса</string>
+    <string name="choose_department_text">Выбери учебное направление</string>
+    <string name="choose_group_text">Выбери номер учебной группы</string>
+
     <string name="title_activity_students_data">StudentsDataActivity</string>
     <string name="title_activity_login_teachers">Sign in</string>
 
