@@ -20,6 +20,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.2"
             android:orientation="vertical"
+            android:paddingTop="25dp"
             android:paddingLeft="25dp"
             android:paddingRight="25dp">
 
@@ -40,6 +41,7 @@
             android:orientation="horizontal">
 
             <ImageButton
+                android:id="@+id/chat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -48,6 +50,7 @@
                 android:src="@mipmap/chat" />
 
             <ImageButton
+                android:id="@+id/schedule"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -56,6 +59,7 @@
                 android:src="@mipmap/calendar" />
 
             <ImageButton
+                android:id="@+id/settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"

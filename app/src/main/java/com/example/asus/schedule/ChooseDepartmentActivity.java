@@ -11,9 +11,9 @@ import android.widget.Spinner;
 
 import com.example.asus.schedule.Helpers.MyCustomAdapter;
 
-public class ChooseGroupActivity extends Activity{
+public class ChooseDepartmentActivity extends Activity{
 
-    private String[] groups = {"ПМИ", "ПИ", "ПИНЖ","ФИИТ"};
+    private String[] departements = {"ПМИ", "ПИ", "ПИНЖ","ФИИТ"};
     private int _position;
     private Button previous;
     private Button next;
@@ -21,17 +21,17 @@ public class ChooseGroupActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.choose_group);
+        setContentView(R.layout.choose_department);
 
         final Spinner spinner= (Spinner) findViewById(R.id.spinner);
-        MyCustomAdapter adapter = new MyCustomAdapter(ChooseGroupActivity.this, R.layout.custom_spiner, groups);
+        MyCustomAdapter adapter = new MyCustomAdapter(ChooseDepartmentActivity.this, R.layout.custom_spiner, departements);
         spinner.setAdapter(adapter);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int pos,
                                        long id) {
-                ChooseGroupActivity.this._position = pos;
+                ChooseDepartmentActivity.this._position = pos;
             }
 
             @Override
@@ -39,15 +39,15 @@ public class ChooseGroupActivity extends Activity{
             }
         });
 
-        Button next = (Button) findViewById(R.id.group_next);
-        next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Toast.makeText(getApplicationContext(),"button is pressed",Toast.LENGTH_SHORT).show();
-                Intent intentNext = new Intent(getApplicationContext(), ChooseGroupActivity.class);
-                startActivity(intentNext);
-            }
-        });
+        Button next = (Button) findViewById(R.id.departement_next);
+            next.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //Toast.makeText(getApplicationContext(),"button is pressed",Toast.LENGTH_SHORT).show();
+                    Intent intentNext = new Intent(getApplicationContext(), ChooseGroupActivity.class);
+                    startActivity(intentNext);
+                }
+            });
     }
 
 

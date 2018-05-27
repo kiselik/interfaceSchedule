@@ -1,15 +1,12 @@
 package com.example.asus.schedule.Helpers;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.SimpleCursorTreeAdapter;
 import android.widget.SimpleExpandableListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -69,7 +66,7 @@ public class ExpListAdapter extends BaseExpandableListAdapter {
                              ViewGroup parent) {
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.group_view, null);
+            convertView = inflater.inflate(R.layout.exp_list_group_view, null);
         }
         TextView textGroup = (TextView) convertView.findViewById(R.id.textGroup);
         textGroup.setText(helper.getGroupText(groupPosition));
@@ -83,7 +80,7 @@ public class ExpListAdapter extends BaseExpandableListAdapter {
                              View convertView, ViewGroup parent) {
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.child_view, null);
+            convertView = inflater.inflate(R.layout.exp_list_child_view, null);
         }
 
         TextView textChild = (TextView) convertView.findViewById(R.id.textChild);
